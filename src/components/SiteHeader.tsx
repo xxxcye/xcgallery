@@ -8,7 +8,7 @@ export function SiteHeader() {
           to="/"
           className="col-span-6 md:col-span-3 font-display italic text-2xl md:text-[28px] leading-none tracking-tight"
         >
-           studio.<span className="text-terracotta">omblingoo</span>
+           studio.<span className="text-terracotta">ombligoo</span>
         </Link>
         <div className="hidden md:block col-span-3 label-xs text-ink-muted">
           ceramics — hand-built<br />small archive 2024 — 2026

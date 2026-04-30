@@ -8,7 +8,7 @@ import { useParallax, useReveal } from "@/hooks/useParallax";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-       { title: "studio.omblingoo — index" },
+       { title: "studio.ombligoo — index" },
       { name: "description", content: "An ongoing archive of hand-built ceramic objects." },
     ],
   }),
@@ -273,7 +273,7 @@ function Index() {
             <figcaption className="mt-4 grid grid-cols-12 gap-4 label-xs text-ink-muted">
               <span className="col-span-6">fig. 99 — north shelf, march</span>
               <span className="col-span-3 text-center hidden md:block">↔ approx. 1.4 m</span>
-               <span className="col-span-6 md:col-span-3 text-right">studio.omblingoo / vol. iii</span>
+               <span className="col-span-6 md:col-span-3 text-right">studio.ombligoo / vol. iii</span>
             </figcaption>
           </figure>
         </div>
