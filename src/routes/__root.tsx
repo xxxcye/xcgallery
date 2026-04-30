@@ -1,6 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -25,48 +23,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "studio.omblingoo — hand-built ceramics, a small archive" },
-      { name: "description", content: "An ongoing archive of hand-built ceramic objects. Vessels, pots, sculptural forms — fired slowly in a small room." },
-      { name: "author", content: "studio.yún" },
-      { property: "og:title", content: "studio.omblingoo — hand-built ceramics, a small archive" },
-      { property: "og:description", content: "An ongoing archive of hand-built ceramic objects. Vessels, pots, sculptural forms — fired slowly in a small room." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "studio.omblingoo — hand-built ceramics, a small archive" },
-      { name: "twitter:description", content: "An ongoing archive of hand-built ceramic objects. Vessels, pots, sculptural forms — fired slowly in a small room." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7e87e78e-895f-47d1-bf05-54798e411707/id-preview-7167e953--035eca2b-d231-4c7f-898c-6ad22497a6dd.lovable.app-1777535192646.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7e87e78e-895f-47d1-bf05-54798e411707/id-preview-7167e953--035eca2b-d231-4c7f-898c-6ad22497a6dd.lovable.app-1777535192646.png" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return <Outlet />;
